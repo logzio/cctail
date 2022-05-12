@@ -1,8 +1,10 @@
 ## Change Log
 
-### v1.6.1 (2021/01/08)
+### v1.6.0 (2022/05/11)
 
 -   Support security, multiple(security+site) routes to fetch logs.
+<details>
+  <summary markdown="span"> Expand to check old versions </summary>
 
 ### v1.5.1 (2021/01/08)
 
