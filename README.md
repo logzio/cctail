@@ -132,6 +132,11 @@ $ cctail
 Run `cctail` in a folder containing either a log.conf-json or dw.json config file.
 The tool will display the list of available logs in order to let you interactively select the ones you want to monitor.
 
+## Credits
+
+This repo is based on a great work that was done by [OpenMindLab](https://github.com/openmindlab/cctail).
+We added some more capabilities to better support our customers’ use cases.
+
 ## License
 
 Copyright (c) 2019 openmind

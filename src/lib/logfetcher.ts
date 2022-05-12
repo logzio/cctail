@@ -147,7 +147,7 @@ const logfetcher = {
 			else if (profile.log_security && profile.log_security === "security") {
 				securityLog = true;
 				res = await this.makeRequest(profile, 'GET', logpath, headers, debug, securityLog);
-			} else if (profile.log_security && profile.log_security === "site") {
+			} else if (profile.log_security && profile.log_security === "operational") {
 
 				res = await this.makeRequest(profile, 'GET', logpath, headers, debug);
 			} else {

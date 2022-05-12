@@ -19,7 +19,7 @@ let fluent: LogFluent;
 let logConfig: LogConfig;
 let profiles: Profiles;
 let profile: DwJson;
-let debug = true;
+let debug = false;
 let interactive = true;
 let pollingSeconds = 3;
 let refreshLogListSeconds = 600;
