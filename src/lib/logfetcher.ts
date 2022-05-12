@@ -56,7 +56,7 @@ const logfetcher = {
 		let url = `https://${profile.hostname}/on/demandware.servlet/webdav/Sites/Logs`;
 		let method: Method = (methodStr as Method);
 
-		if (profile.log_security && securityRequest) {
+		if (profile.log_source && securityRequest) {
 			url = `https://${profile.hostname}/on/demandware.servlet/webdav/Sites/Securitylogs`;
 		}
 		if (url_suffix && url_suffix.length > 0) {
@@ -134,7 +134,7 @@ const logfetcher = {
 			let headers = new Map([["User-Agent", ua]]);
 			let res;
 			let securityLog;
-			if (profile.log_security && profile.log_security === "all") {
+			if (profile.log_source && profile.log_source === "all") {
 				securityLog = true;
 				let resSite = await this.makeRequest(profile, 'GET', logpath, headers, debug);
 				let resSecurity;
@@ -144,10 +144,10 @@ const logfetcher = {
 				res = { ...resSite, ...resSecurity };
 				res.data = resData;
 			}
-			else if (profile.log_security && profile.log_security === "security") {
+			else if (profile.log_source && profile.log_source === "security") {
 				securityLog = true;
 				res = await this.makeRequest(profile, 'GET', logpath, headers, debug, securityLog);
-			} else if (profile.log_security && profile.log_security === "operational") {
+			} else if (profile.log_source && profile.log_source === "operational") {
 
 				res = await this.makeRequest(profile, 'GET', logpath, headers, debug);
 			} else {

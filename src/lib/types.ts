@@ -3,7 +3,7 @@ import moment from 'moment';
 export interface DwJson {
 	hostname: string,
 	client_id?: string,
-	log_security?: 'operational' | 'security' | 'all',
+	log_source?: 'operational' | 'security' | 'all',
 	client_secret?: string,
 	username?: string,
 	password?: string,

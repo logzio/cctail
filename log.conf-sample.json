@@ -4,7 +4,7 @@
             "hostname": "dev01.mysandbox.demandware.net",
             "client_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "client_secret": "client-secret",
-            "log_security": "all | security | operational",
+            "log_source": "all | security | operational",
             "polling_interval": 30
         },
         "bmprofile": {

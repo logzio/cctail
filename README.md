@@ -40,7 +40,7 @@ Requires one of the following configuration files:
         -   Standard log types: `analytics`, `api`, `codeprofiler`, `console`, `customdebug`, `customerror`, `customfatal`, `custominfo`, `customwarn`, `dbinit-sql`, `debug`, `deprecation`, `error`, `fatal`, `info`, `jobs`, `migration`, `performance`, `quota`, `sql`, `staging`, `sysevent`, `syslog`, `warn`
     -   `"polling_interval": nnn` _(default: `3`)_ - Frequency (seconds) with which cctail will poll the logs.
         -   If you are using non-interactive mode to pipe the logs elsewhere (i.e. FluentD), a longer interval is recommended (i.e. 30 or 60).
-    -   `"log_security"`_(default:`site`)_: flag for routing from where to read logs. Avaiable 3 parameters `all`, `security`, `site`.
+    -   `"log_source"`_(default:`operational`)_: flag for routing from where to read logs. Available 3 parameters `all`, `security`, `operational`.
     -   `"refresh_loglist_interval": nnn` _(default: `600`)_ - In non-interactive mode, this is the frequency (seconds) in which cctail will check the WebDAV server for new logs that match your `log_types` criteria.
 -   `"interactive": true|false` _(default: `true`)_ - Interactive mode asks which logs you will want to tail. If `false`, cctail will tail all of today's logs by default.
 
@@ -64,7 +64,8 @@ Sample dw.json:
 {
     "hostname": "dev01-mysandbox.demandware.net",
     "client_id": "a12464ae-b484-4b90-4dfe-17e20844e9f0",
-    "client_secret": "mysupersecretpassword"
+    "client_secret": "mysupersecretpassword",
+    "log_source": "all | security | operational"
 }
 ```
 
