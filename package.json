@@ -40,7 +40,7 @@
         "node": ">=10.0.0"
     },
     "dependencies": {
-        "@types/prompts": "2.0.9",
+        "@types/prompts": "2.4.9",
         "@types/underscore.string": "0.0.38",
         "axios": "0.21.3",
         "chalk": "4.1.0",
