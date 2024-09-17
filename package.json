@@ -42,7 +42,7 @@
     "dependencies": {
         "@types/prompts": "2.0.9",
         "@types/underscore.string": "0.0.38",
-        "axios": "0.21.3",
+        "axios": "1.7.2",
         "chalk": "4.1.0",
         "fluent-logger": "^3.4.1",
         "moment": "2.29.2",
